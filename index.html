@@ -1,0 +1,862 @@
+<style>
+/* Scoped styles for Airbnb Portfolio - City Strategies Focus */
+.airbnb-portfolio * {
+    box-sizing: border-box;
+}
+
+.airbnb-portfolio {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: #222222;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+/* Hero Section */
+.ap-hero {
+    background: linear-gradient(135deg, #FF385C 0%, #BD1E59 100%);
+    color: white;
+    padding: 80px 30px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 -20px 40px -20px;
+}
+
+.ap-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.03) 0px,
+        rgba(255, 255, 255, 0.03) 2px,
+        transparent 2px,
+        transparent 40px
+    );
+    opacity: 0.5;
+}
+
+.ap-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ap-category {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.ap-hero h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin: 0 0 25px 0;
+    font-weight: 700;
+    color: white !important;
+}
+
+.ap-subtitle {
+    font-size: 20px;
+    margin-bottom: 40px;
+    opacity: 0.95;
+    line-height: 1.6;
+    max-width: 900px;
+}
+
+.ap-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.ap-stat-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.ap-stat-number {
+    font-size: 40px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 8px;
+    color: #FF385C;
+}
+
+.ap-stat-label {
+    font-size: 14px;
+    color: #222222;
+    opacity: 0.8;
+}
+
+/* Section Styles */
+.ap-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 30px;
+}
+
+.ap-section-white {
+    background: white;
+    margin: 0 -20px;
+    padding: 60px 30px;
+}
+
+.ap-section-dark {
+    background: #222222;
+    color: white;
+    margin: 60px -20px;
+    padding: 60px 30px;
+}
+
+.ap-section-light {
+    background: #FFF8F0;
+    margin: 0 -20px;
+    padding: 60px 30px;
+}
+
+.ap-section-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #FF385C;
+    margin-bottom: 15px;
+}
+
+.ap-section-label-white {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.ap-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #222222;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.ap-section-dark h2 {
+    color: white;
+}
+
+.ap-section-text {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #222222;
+    margin-bottom: 20px;
+}
+
+.ap-section-dark .ap-section-text {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Problem Section */
+.ap-problem-highlight {
+    background: #FFF3F5;
+    border-left: 4px solid #FF385C;
+    padding: 25px 30px;
+    margin: 30px 0;
+    border-radius: 8px;
+}
+
+.ap-problem-highlight p {
+    font-size: 20px;
+    color: #222222;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Approach Grid */
+.ap-approach-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.ap-approach-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    border: 2px solid #f7f7f7;
+}
+
+.ap-approach-number {
+    width: 50px;
+    height: 50px;
+    background: #FF385C;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.ap-approach-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #222222;
+    font-weight: 700;
+}
+
+.ap-approach-card p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #717171;
+    margin: 0;
+}
+
+/* City Findings Grid */
+.ap-cities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.ap-city-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e5e5;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ap-city-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.ap-city-header {
+    background: linear-gradient(135deg, #f7f7f7 0%, #e5e5e5 100%);
+    padding: 40px 30px;
+    text-align: center;
+    position: relative;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ap-city-name {
+    font-size: 28px;
+    font-weight: 700;
+    color: #222222;
+    margin-bottom: 10px;
+}
+
+.ap-city-label {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #717171;
+    font-weight: 600;
+}
+
+.ap-chart-placeholder {
+    font-size: 14px;
+    color: #717171;
+    font-style: italic;
+    text-align: center;
+}
+
+.ap-city-content {
+    padding: 30px;
+}
+
+.ap-city-insight {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #222222;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.ap-city-data {
+    background: #FFF8F0;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 3px solid #FFB400;
+}
+
+.ap-city-data-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #FFB400;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.ap-city-data-value {
+    font-size: 15px;
+    color: #222222;
+    line-height: 1.6;
+}
+
+.ap-city-recommendation {
+    background: #F0F9FF;
+    padding: 15px 20px;
+    border-radius: 8px;
+    border-left: 3px solid #00A699;
+}
+
+.ap-city-rec-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #00A699;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.ap-city-rec-text {
+    font-size: 15px;
+    color: #222222;
+    line-height: 1.6;
+}
+
+/* LA Exception Highlight */
+.ap-city-card.ap-exception {
+    border: 2px solid #FF385C;
+    position: relative;
+}
+
+.ap-exception-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #FF385C;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Playbook Section */
+.ap-playbook-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.ap-playbook-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    border: 2px solid #f7f7f7;
+    transition: all 0.3s ease;
+}
+
+.ap-playbook-card:hover {
+    border-color: #FF385C;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.ap-playbook-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #222222;
+}
+
+.ap-playbook-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ap-playbook-list li {
+    padding-left: 25px;
+    position: relative;
+    margin-bottom: 12px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #222222;
+}
+
+.ap-playbook-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #FF385C;
+    font-weight: 700;
+}
+
+/* Impact Section */
+.ap-impact-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.ap-impact-box {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ap-impact-box h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: white;
+    font-weight: 700;
+}
+
+.ap-impact-box p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+/* CTA Section */
+.ap-cta-section {
+    text-align: center;
+    padding: 60px 30px;
+    background: white;
+    margin: 0 -20px;
+}
+
+.ap-cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.ap-cta-section h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #222222;
+}
+
+.ap-cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.ap-btn {
+    padding: 15px 35px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.ap-btn-primary {
+    background: #FF385C;
+    color: white;
+}
+
+.ap-btn-primary:hover {
+    background: #BD1E59;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 56, 92, 0.3);
+}
+
+.ap-btn-secondary {
+    background: #f7f7f7;
+    color: #222222;
+}
+
+.ap-btn-secondary:hover {
+    background: #e5e5e5;
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .ap-hero {
+        padding: 50px 20px;
+        margin: 0 -10px 30px -10px;
+    }
+    
+    .ap-hero h1 {
+        font-size: 32px;
+    }
+    
+    .ap-subtitle {
+        font-size: 18px;
+    }
+    
+    .ap-stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .ap-section,
+    .ap-section-white,
+    .ap-section-dark,
+    .ap-section-light,
+    .ap-cta-section {
+        padding: 40px 20px;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    
+    .ap-section h2 {
+        font-size: 28px;
+    }
+    
+    .ap-cities-grid,
+    .ap-playbook-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .ap-cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .ap-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+</style>
+
+<!-- Start of Airbnb Portfolio Content -->
+<div class="airbnb-portfolio">
+    <!-- Hero Section -->
+    <section class="ap-hero">
+        <div class="ap-hero-content">
+            <div class="ap-category">Data Analytics Portfolio Project</div>
+            <h1>Does the Same Strategy Work in Every Market?</h1>
+            <p class="ap-subtitle">Analyzing 229K+ Airbnb listings across 4 major US cities to uncover how minimum-night policies impact revenue—and why location-specific strategies matter.</p>
+            
+            <div class="ap-stats-grid">
+                <div class="ap-stat-card">
+                    <span class="ap-stat-number">229K+</span>
+                    <span class="ap-stat-label">Listings Analyzed</span>
+                </div>
+                <div class="ap-stat-card">
+                    <span class="ap-stat-number">4 Cities</span>
+                    <span class="ap-stat-label">NYC, SF, Seattle, LA</span>
+                </div>
+                <div class="ap-stat-card">
+                    <span class="ap-stat-number">31%</span>
+                    <span class="ap-stat-label">Revenue Difference</span>
+                </div>
+                <div class="ap-stat-card">
+                    <span class="ap-stat-number">1</span>
+                    <span class="ap-stat-label">Major Exception</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Role -->
+    <section class="ap-section-white">
+        <div class="ap-section">
+            <div class="ap-section-label">My Role</div>
+            <h2>City-by-City Strategic Analysis</h2>
+            <p class="ap-section-text">
+                As part of a 4-person analytics team, I led the comparative analysis of minimum-night booking policies across New York, San Francisco, Seattle, and Los Angeles. My focus was understanding whether revenue optimization strategies work universally—or if market-specific factors require localized approaches.
+            </p>
+            <p class="ap-section-text">
+                <strong>Tools & Methods:</strong> Python (Pandas, NumPy), SQL, Matplotlib/Seaborn for visualization, comparative statistical analysis across geographic segments
+            </p>
+        </div>
+    </section>
+
+    <!-- The Problem -->
+    <section class="ap-section">
+        <div class="ap-section-label">The Problem</div>
+        <h2>Airbnb Hosts Don't Know Which Policy to Choose</h2>
+        <p class="ap-section-text">
+            Airbnb hosts face a critical decision: Should they require guests to book for a minimum number of nights? The tradeoff seems clear—more flexibility attracts more bookings, but longer stays reduce turnover costs and effort.
+        </p>
+        
+        <div class="ap-problem-highlight">
+            <p>"Should I set a 1-night minimum to maximize bookings, or require 7+ nights to reduce the hassle of constant turnovers?"</p>
+        </div>
+        
+        <p class="ap-section-text">
+            Without data, hosts rely on intuition. Some assume flexibility always wins. Others copy what works in their city without understanding why. The result? Suboptimal pricing strategies that leave money on the table.
+        </p>
+    </section>
+
+    <!-- The Approach -->
+    <section class="ap-section-light">
+        <div class="ap-section">
+            <div class="ap-section-label">The Approach</div>
+            <h2>How I Analyzed Four Markets</h2>
+            <p class="ap-section-text">
+                I designed a framework to compare minimum-night policies across cities, examining how different strategies impact revenue and occupancy rates.
+            </p>
+            
+            <div class="ap-approach-grid">
+                <div class="ap-approach-card">
+                    <div class="ap-approach-number">1</div>
+                    <h3>Policy Classification</h3>
+                    <p>Categorized listings into Flexible (1-2 nights), Moderate (3-7 nights), and Strict (8+ nights) policies</p>
+                </div>
+                
+                <div class="ap-approach-card">
+                    <div class="ap-approach-number">2</div>
+                    <h3>Revenue Modeling</h3>
+                    <p>Calculated estimated annual revenue using price, availability, and booking frequency data</p>
+                </div>
+                
+                <div class="ap-approach-card">
+                    <div class="ap-approach-number">3</div>
+                    <h3>Occupancy Analysis</h3>
+                    <p>Segmented properties by occupancy levels to understand booking patterns</p>
+                </div>
+                
+                <div class="ap-approach-card">
+                    <div class="ap-approach-number">4</div>
+                    <h3>City Comparison</h3>
+                    <p>Used trend line analysis and scatter plots to identify patterns and exceptions across markets</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Findings -->
+    <section class="ap-section">
+        <div class="ap-section-label">The Findings</div>
+        <h2>Three Cities Follow the Pattern, One Breaks It</h2>
+        <p class="ap-section-text">
+            My analysis revealed a clear pattern in NYC, San Francisco, and Seattle—but Los Angeles told a completely different story.
+        </p>
+        
+        <div class="ap-cities-grid">
+            <!-- NYC -->
+            <div class="ap-city-card">
+                <div class="ap-city-header">
+                    <div>
+                        <div class="ap-city-name">New York City</div>
+                        <div class="ap-city-label">Pattern: Standard</div>
+                        <div class="ap-chart-placeholder" style="margin-top: 20px;">[Trend line chart placeholder:<br>Moderate outperforms across occupancy levels]</div>
+                    </div>
+                </div>
+                <div class="ap-city-content">
+                    <p class="ap-city-insight">Moderate policies (3-7 nights) consistently deliver 25-31% higher revenue than both flexible and strict approaches.</p>
+                    
+                    <div class="ap-city-data">
+                        <div class="ap-city-data-label">Key Data Point</div>
+                        <div class="ap-city-data-value">Median revenue: Moderate ($54,750) vs Flexible ($41,975) vs Strict ($35,451)</div>
+                    </div>
+                    
+                    <div class="ap-city-recommendation">
+                        <div class="ap-city-rec-label">Strategy</div>
+                        <div class="ap-city-rec-text">Moderate policies optimal. Strict only competitive at 85%+ occupancy for premium properties.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- SF -->
+            <div class="ap-city-card">
+                <div class="ap-city-header">
+                    <div>
+                        <div class="ap-city-name">San Francisco</div>
+                        <div class="ap-city-label">Pattern: Standard</div>
+                        <div class="ap-chart-placeholder" style="margin-top: 20px;">[Trend line chart placeholder:<br>Moderate leads consistently]</div>
+                    </div>
+                </div>
+                <div class="ap-city-content">
+                    <p class="ap-city-insight">SF shows the strongest preference for moderate policies, with clear separation from other policy types across all occupancy levels.</p>
+                    
+                    <div class="ap-city-data">
+                        <div class="ap-city-data-label">Key Data Point</div>
+                        <div class="ap-city-data-value">Moderate policies achieve highest revenue even at lower occupancy rates</div>
+                    </div>
+                    
+                    <div class="ap-city-recommendation">
+                        <div class="ap-city-rec-label">Strategy</div>
+                        <div class="ap-city-rec-text">Strong moderate policy advantage. Pair with dynamic pricing for premium neighborhoods (Marina, Mission, Noe Valley).</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Seattle -->
+            <div class="ap-city-card">
+                <div class="ap-city-header">
+                    <div>
+                        <div class="ap-city-name">Seattle</div>
+                        <div class="ap-city-label">Pattern: Standard</div>
+                        <div class="ap-chart-placeholder" style="margin-top: 20px;">[Trend line chart placeholder:<br>Moderate wins, strict rises at high occupancy]</div>
+                    </div>
+                </div>
+                <div class="ap-city-content">
+                    <p class="ap-city-insight">Moderate policies lead overall. Flexible stays steady. Strict policies show sharper upward trend at higher occupancy rates.</p>
+                    
+                    <div class="ap-city-data">
+                        <div class="ap-city-data-label">Key Data Point</div>
+                        <div class="ap-city-data-value">51% of moderate-policy listings achieve high occupancy vs 47% for flexible</div>
+                    </div>
+                    
+                    <div class="ap-city-recommendation">
+                        <div class="ap-city-rec-label">Strategy</div>
+                        <div class="ap-city-rec-text">Moderate for most hosts. High-occupancy premium properties can consider strict policies.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- LA - Exception -->
+            <div class="ap-city-card ap-exception">
+                <div class="ap-exception-badge">Exception</div>
+                <div class="ap-city-header">
+                    <div>
+                        <div class="ap-city-name">Los Angeles</div>
+                        <div class="ap-city-label">Pattern: Inverse</div>
+                        <div class="ap-chart-placeholder" style="margin-top: 20px;">[Trend line chart placeholder:<br>Strict stays flat, Flexible/Moderate decline]</div>
+                    </div>
+                </div>
+                <div class="ap-city-content">
+                    <p class="ap-city-insight">LA breaks the pattern entirely. Flexible and moderate policies trend downward as occupancy increases, while strict policies remain competitive.</p>
+                    
+                    <div class="ap-city-data">
+                        <div class="ap-city-data-label">Why This Matters</div>
+                        <div class="ap-city-data-value">LA's crowded market and long-term rental culture reward premium positioning over booking flexibility</div>
+                    </div>
+                    
+                    <div class="ap-city-recommendation">
+                        <div class="ap-city-rec-label">Strategy</div>
+                        <div class="ap-city-rec-text">Strict policies competitive for premium positioning. Flexible/moderate require aggressive dynamic pricing to succeed.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Playbook -->
+    <section class="ap-section-light">
+        <div class="ap-section">
+            <div class="ap-section-label">The Playbook</div>
+            <h2>City-Specific Hosting Strategies</h2>
+            <p class="ap-section-text">
+                Based on this analysis, here are actionable recommendations for hosts in each market.
+            </p>
+            
+            <div class="ap-playbook-grid">
+                <div class="ap-playbook-card">
+                    <div class="ap-playbook-title">📍 NYC Hosts</div>
+                    <ul class="ap-playbook-list">
+                        <li>Default to 3-7 night minimum policies</li>
+                        <li>Use strict (8+ nights) only for premium properties with 85%+ occupancy</li>
+                        <li>Pair moderate policies with dynamic pricing</li>
+                    </ul>
+                </div>
+                
+                <div class="ap-playbook-card">
+                    <div class="ap-playbook-title">📍 San Francisco Hosts</div>
+                    <ul class="ap-playbook-list">
+                        <li>Moderate policies deliver strongest returns</li>
+                        <li>Premium neighborhoods (Marina, Mission, Noe Valley) can charge higher rates</li>
+                        <li>Avoid strict policies unless targeting corporate/extended stays</li>
+                    </ul>
+                </div>
+                
+                <div class="ap-playbook-card">
+                    <div class="ap-playbook-title">📍 Seattle Hosts</div>
+                    <ul class="ap-playbook-list">
+                        <li>Moderate policies optimal for most segments</li>
+                        <li>High-occupancy properties can test strict policies</li>
+                        <li>Flexible policies offer steady but lower revenue</li>
+                    </ul>
+                </div>
+                
+                <div class="ap-playbook-card">
+                    <div class="ap-playbook-title">📍 Los Angeles Hosts</div>
+                    <ul class="ap-playbook-list">
+                        <li>Consider strict policies for premium market positioning</li>
+                        <li>Long-term stays (30+ days) perform better than short stays</li>
+                        <li>Flexible/moderate policies need aggressive pricing optimization</li>
+                    </ul>
+                </div>
+                
+                <div class="ap-playbook-card">
+                    <div class="ap-playbook-title">🆕 New Hosts (All Cities)</div>
+                    <ul class="ap-playbook-list">
+                        <li>Start with moderate (3-7 nights) in NYC/SF/Seattle</li>
+                        <li>Test for 3 months and track performance metrics</li>
+                        <li>Build reputation before optimizing</li>
+                    </ul>
+                </div>
+                
+                <div class="ap-playbook-card">
+                    <div class="ap-playbook-title">⭐ Luxury Properties (All Cities)</div>
+                    <ul class="ap-playbook-list">
+                        <li>Moderate policies + premium pricing works in most markets</li>
+                        <li>Use dynamic pricing tools to optimize rates</li>
+                        <li>Add perks (late checkout, breakfast) to justify higher prices</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Impact -->
+    <section class="ap-section-dark">
+        <div class="ap-section">
+            <div class="ap-section-label ap-section-label-white">The Impact</div>
+            <h2>What This Means for Stakeholders</h2>
+            
+            <div class="ap-impact-boxes">
+                <div class="ap-impact-box">
+                    <h3>For Airbnb Hosts</h3>
+                    <p>Clear, data-backed policy recommendations by market. Switching from strict to moderate policies could increase annual revenue by $10K-$20K per listing in most cities.</p>
+                </div>
+                
+                <div class="ap-impact-box">
+                    <h3>For Property Managers</h3>
+                    <p>Portfolio-wide optimization strategies. Different cities require different approaches—one-size-fits-all policies leave money on the table.</p>
+                </div>
+                
+                <div class="ap-impact-box">
+                    <h3>For the Platform</h3>
+                    <p>Framework for automated, location-aware policy recommendations in host dashboards. Improved revenue = higher platform fees.</p>
+                </div>
+                
+                <div class="ap-impact-box">
+                    <h3>Key Lesson</h3>
+                    <p>Market strategies can't be copy-pasted across geographies. Local context—market saturation, tourist vs. business travel, regulatory environment—drives optimal outcomes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="ap-cta-section">
+        <div class="ap-cta-content">
+            <h2>Want to See the Full Analysis?</h2>
+            <p class="ap-section-text">
+                Explore the complete code, methodology, and visualizations on GitHub, or download the presentation deck.
+            </p>
+            <div class="ap-cta-buttons">
+                <a href="#" class="ap-btn ap-btn-primary">View Code on GitHub</a>
+                <a href="#" class="ap-btn ap-btn-secondary">Download Presentation</a>
+            </div>
+        </div>
+    </section>
+</div>
+<!-- End of Airbnb Portfolio Content -->
